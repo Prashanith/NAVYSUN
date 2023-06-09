@@ -1,0 +1,32 @@
+.subscribeInputField {
+  all: unset;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: black;
+  height: 40px;
+  padding: 5px 20px;
+  border-radius: 25px 0px 0px 25px;
+  font-size: 15px;
+  width: 100%;
+}
+
+.subscribeComp {
+  background-color: #ececec;
+  max-width: min(90%, 370px);
+  border-radius: 25px;
+  font-size: 15px;
+  width: 100%;
+}
+
+.subscribeBtn {
+  all: unset;
+  outline: none;
+  border: none;
+  color: white;
+  background-color: red;
+  height: 40px;
+  padding: 5px 20px;
+  border-radius: 25px;
+  font-size: 15px;
+}

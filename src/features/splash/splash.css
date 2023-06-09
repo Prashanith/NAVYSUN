@@ -1,0 +1,26 @@
+@keyframes splashEffect {
+  0% {
+    transform: scale(0vw, 0vh);
+  }
+  100% {
+    transform: scale(200, 200);
+  }
+}
+
+.splash {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  position: absolute;
+  height: 1vh;
+  width: 1vw;
+  background-color: #ef7f1d;
+  border-radius: 100%;
+  content: "\200b";
+  animation-name: splashEffect;
+  animation-duration: 1.5s;
+  animation-timing-function: cubic-bezier();
+  animation-delay: 0s;
+  animation-direction: normal;
+}
