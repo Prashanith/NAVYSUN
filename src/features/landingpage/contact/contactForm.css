@@ -1,0 +1,21 @@
+.inputField {
+  all: unset;
+  outline: none;
+  border: none;
+  background-color: #ececec;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 8px;
+  width: min(90vw, 400px);
+}
+
+.textArea {
+  all: unset;
+  outline: none;
+  border: none;
+  background-color: #ececec;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 8px;
+  width: min(90vw, 400px);
+}

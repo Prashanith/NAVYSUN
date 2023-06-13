@@ -1,5 +1,5 @@
 class Constants {
-  static brand = "NAVYSUN PHARMACEUTICALS";
+  static brand = "NAVYSUN PHARMA";
   static message = "Believe in NAVYSUN for Medicine";
 }
 

@@ -6,9 +6,12 @@ export default {
       colors: {
         primary: "#0A2647",
         secondary: "#EF7F1D",
-        tertairy: "#FEFDF9",
+        tertiary: "#FEFDF9",
+      },
+      backgroundImage: {
+        landing: "url('/landing.png')",
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };
