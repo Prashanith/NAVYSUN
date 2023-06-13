@@ -1,10 +1,19 @@
 import Constants from "../../config/config";
 
-function Logo() {
+interface ILogoProps {
+  showMessage: boolean;
+}
+
+function Logo({ showMessage = false }: ILogoProps) {
   return (
-    <div className="flex justify-start items-center gap-5">
+    <div className="flex justify-start items-start gap-5">
       <img src="./pill.png" className="h-[25px]" />
-      <p className=" text-xl">{Constants.brand}</p>
+      <div>
+        <p className=" text-xl">{Constants.brand}</p>
+        {showMessage && (
+          <p className="mt-2 text-md text-gray-500">{Constants.message}</p>
+        )}
+      </div>
     </div>
   );
 }

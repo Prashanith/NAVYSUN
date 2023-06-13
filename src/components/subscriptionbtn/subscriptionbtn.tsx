@@ -14,7 +14,7 @@ function Subscribe() {
   }
 
   return (
-    <div className="subscribe max-w-[370px]">
+    <div className="mt-5 lg:mt-0 subscribe max-w-[370px] lg:text-left text-center">
       <p className="text-xl font-extrabold">Connect with us</p>
       <div className="mt-4">
         <Socials />
@@ -27,9 +27,9 @@ function Subscribe() {
         launches, events, schemes. We respect your privacy, your information is
         safe and will never be shared
       </p>
-      <div className="mt-6 flex flex-row items-center justify-start subscribeComp  ">
+      <div className="lg:mx-0 mx-auto mt-6 flex flex-row items-center justify-start subscribeComp  ">
         <input
-          className="subscribeInputField"
+          className="subscribeInputField text-left"
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}

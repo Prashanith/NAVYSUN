@@ -28,7 +28,7 @@ function Pharmacies() {
     },
   ];
   return (
-    <div className="pagePadding h-screen flex flex-row justify-start items-center">
+    <div className="pagePadding bg-white h-screen flex flex-row justify-start items-center">
       <div className=" flex-1 ">
         <p className="font-semibold lg:text-8xl md:text-6xl text-5xl">
           <span>Here are our</span>
