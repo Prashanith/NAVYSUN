@@ -51,5 +51,9 @@
   .textBtn{
     @apply bg-tertiary text-primary;
   }
+
+  .anchor{
+    @apply text-gray-700 transition hover:opacity-75 dark:text-gray-200;
+  }
 }
 

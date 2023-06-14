@@ -7,7 +7,7 @@ function SplashScreen() {
   const route = useNavigate();
   useEffect(() => {
     setTimeout(() => {
-      // route(AppRoutes.HOME);
+      route(AppRoutes.HOME);
     }, 1500);
   }, []);
 

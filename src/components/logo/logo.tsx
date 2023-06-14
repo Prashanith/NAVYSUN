@@ -2,12 +2,13 @@ import Constants from "../../config/config";
 
 interface ILogoProps {
   showMessage: boolean;
+  imageHeight: number;
 }
 
-function Logo({ showMessage = false }: ILogoProps) {
+function Logo({ showMessage = false, imageHeight = 25 }: ILogoProps) {
   return (
-    <div className="flex justify-start items-start gap-5">
-      <img src="./pill.png" className="h-[25px]" />
+    <div className="flex justify-center items-center gap-5">
+      <img src="./logo.png" width={imageHeight} />
       <div>
         <p className=" text-xl">{Constants.brand}</p>
         {showMessage && (

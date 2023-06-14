@@ -14,7 +14,7 @@ function Subscribe() {
   }
 
   return (
-    <div className="mt-5 lg:mt-0 subscribe max-w-[370px] lg:text-left text-center">
+    <div className="my-10 lg:mt-0 subscribe max-w-[370px] lg:text-left text-center">
       <p className="text-xl font-extrabold">Connect with us</p>
       <div className="mt-4">
         <Socials />

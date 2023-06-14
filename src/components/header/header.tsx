@@ -23,7 +23,7 @@ function Header() {
 
   return (
     <div className=" bg-tertiary h-[70px] flex flex-row justify-between items-center">
-      <Logo />
+      <Logo showMessage={false} imageHeight={50} />
       <div>
         <ul className="lg:flex sm:space-x-5 hidden">
           {navItems.map((e) => {
@@ -82,7 +82,7 @@ function SideNavigation({ showNav, setShownav }: INavItem) {
       }`}
     >
       <div className="mt-5">
-        <Logo />
+        <Logo showMessage={false} imageHeight={40} />
       </div>
       <ul className="flex flex-col space-y-5 pt-8">
         {navItems.map((e) => {
