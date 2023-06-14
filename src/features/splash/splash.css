@@ -15,12 +15,12 @@
   position: absolute;
   height: 1vh;
   width: 1vw;
-  background-color: #ef7f1d;
+  background-color: #FEFDF9;
   border-radius: 100%;
   content: "\200b";
   animation-name: splashEffect;
   animation-duration: 1.5s;
-  animation-timing-function: cubic-bezier();
+  animation-timing-function:cubic-bezier(0.785, 0.135, 0.15, 0.86);
   animation-delay: 0s;
   animation-direction: normal;
 }

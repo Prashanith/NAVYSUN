@@ -28,12 +28,32 @@ const products: IProduct[] = [
     description: "",
     imagePath: "./med4.svg",
   },
+  {
+    name: "OMNI GEL",
+    description: "",
+    imagePath: "./med1.svg",
+  },
+  {
+    name: "VOLINI",
+    description: "",
+    imagePath: "./med2.svg",
+  },
+  {
+    name: "VIPER 60",
+    description: "",
+    imagePath: "./med3.svg",
+  },
+  {
+    name: "GOAL 360",
+    description: "",
+    imagePath: "./med4.svg",
+  },
 ];
 
 function Products() {
   return (
-    <div className="flex flex-col pagePadding pt-10">
-      <div className="font-bold text-5xl">
+    <div className="flex flex-col pagePadding componentSpacing justify-center">
+      <div className="font-bold text-4xl lg:text-5xl">
         <p>PRODUCTS</p>
       </div>
       <div>

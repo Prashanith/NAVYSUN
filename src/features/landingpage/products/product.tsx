@@ -14,10 +14,10 @@ function Product({ name, description, imagePath }: IProduct) {
     );
   }
   return (
-    <div className="flex flex-col justify-center items-start carousel-item  w-64  py-8 mr-8 ">
+    <div className="flex flex-col justify-center items-start carousel-item w-36 md:w-48 lg:w-64  py-8 mr-8 ">
       <img
         src={imagePath}
-        className={` h-80 bg-[${getRandomColor()}] bg-[#ececec]  rounded-xl px-10`}
+        className={`h-44 md:w-60 lg:h-80 bg-[${getRandomColor()}] bg-[#ececec]  rounded-xl px-10`}
         id={id + imagePath}
       />
       <p className="text-lg font-semibold mt-6 px-4">{name}</p>

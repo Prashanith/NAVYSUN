@@ -28,8 +28,8 @@ function Pharmacies() {
     },
   ];
   return (
-    <div className="pagePadding bg-white h-screen flex flex-row justify-start items-center">
-      <div className=" flex-1 ">
+    <div className="pagePadding componentSpacing bg-white flex flex-col lg:flex-row justify-center lg:justify-center items-center">
+      <div className="flex-1">
         <p className="font-semibold lg:text-8xl md:text-6xl text-5xl">
           <span>Here are our</span>
           <br />
@@ -41,7 +41,7 @@ function Pharmacies() {
           </span>
         </p>
       </div>
-      <div className="flex flex-wrap basis-2/4 justify-start items-start gap-6">
+      <div className="flex flex-wrap basis-2/4 justify-start items-start gap-6 content-center justify-items-center">
         {pharmacies.map((pharmacy) => (
           <PharmacyCard
             key={pharmacy.name}

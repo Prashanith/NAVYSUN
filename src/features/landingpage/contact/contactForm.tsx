@@ -15,8 +15,8 @@ function ContactForm() {
     },
   });
   return (
-    <div className="w-full contactBg bg-white pagePadding py-32 flex justify-center items-start gap-x-20">
-      <div className="hidden lg:block">
+    <div className="w-full contactBg bg-white pagePadding componentSpacing flex justify-center items-start gap-x-20">
+      <div className="hidden lg:block w-4/12">
         <img src="./contact.svg" />
       </div>
       <div>

@@ -6,7 +6,7 @@
   color: black;
   padding: 5px 10px;
   border-radius: 8px;
-  width: min(90vw, 400px);
+  width: min(80vw, 400px);
   height: 40px;
   padding: 5px 13px;
   font-size: 17px;
@@ -20,7 +20,7 @@
   color: black;
   padding: 5px 10px;
   border-radius: 8px;
-  width: min(90vw, 400px);
+  width: min(80vw, 400px);
 }
 
 .contactBg {
