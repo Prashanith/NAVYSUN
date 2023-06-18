@@ -75,10 +75,10 @@ function Product({ name, description, imagePath }: IProduct) {
     return `rgb(${context!.getImageData(0, 0, 1, 1).data.slice(0, 3)})`;
   }
   return (
-    <div className="flex flex-col justify-center items-start carousel-item w-36 md:w-48 lg:w-64  py-8 mr-8 ">
+    <div className="flex flex-col justify-center items-start carousel-item w-36 md:w-48 lg:w-64  py-8 mr-8">
       <img
         src={imagePath}
-        className={`h-44 md:w-60 lg:h-80 bg-white  rounded-xl px-10`}
+        className={`h-44 md:w-60 lg:h-80 bg-white  rounded-xl px-10 border-teal-100 border-[1px]`}
         id={id + imagePath}
       />
       <p className="text-lg font-semibold mt-6 px-4">{name}</p>
