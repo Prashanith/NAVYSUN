@@ -44,7 +44,12 @@ function Pharmacies() {
           <br />
           <span className=" text-secondary">Pharmacies.</span>
         </motion.p>
-        <motion.p className="sm:text-2xl text-xl font-medium mt-10">
+        <motion.p
+          initial={{ x: "-100vw" }}
+          animate={{ x: 0 }}
+          transition={{ delay: 0, duration: 2, type: "spring" }}
+          className="sm:text-2xl text-xl font-medium mt-10"
+        >
           Get Medicines from the best of our pharmacies
         </motion.p>
       </div>
