@@ -1,16 +1,16 @@
-import React from 'react'
+// import React from 'react'
 
 
-interface PillProps{
+// interface PillProps{
     
-}
+// }
 
-function Pill() {
-  return (
-    <div>
+// function Pill() {
+//   return (
+//     <div>
 
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
 
-export default Pill
+// export default Pill

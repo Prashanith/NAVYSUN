@@ -28,7 +28,6 @@ function HealthService({
   doctor,
   speciality,
   availability,
-  specialnote,
   imagePath,
 }: HealthService) {
   return (
