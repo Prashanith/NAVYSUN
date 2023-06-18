@@ -71,7 +71,10 @@ function Services() {
   ];
 
   return (
-    <div className="w-full pagePadding componentSpacing bg-white flex flex-col xl:flex-row items-center bg-[url('./bg.png')] gap-8">
+    <div
+      id="services"
+      className="w-full pagePadding componentSpacing bg-white flex flex-col xl:flex-row items-center bg-[url('./bg.png')] gap-8"
+    >
       {/* A Heritage in Care, A Reputation in Excellence */}
       <div className="w-full xl:w-1/2">
         <p className="font-semibold lg:text-8xl md:text-6xl text-5xl">
@@ -79,7 +82,8 @@ function Services() {
           <span className="text-secondary"> best service</span>
         </p>
         <p className="sm:text-2xl text-lg w-[min(90%,600px)] pt-[2vh] sm:pt-[5vh] font-medium">
-          We will help you feel better and ace every single day of your life
+          We will help you feel better and ace every single day of your life.
+          Visit our best in class clinics
         </p>
       </div>
       <div className="flex gap-10 flex-col md:flex-row xl:flex-col">

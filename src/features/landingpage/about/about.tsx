@@ -74,19 +74,25 @@ function QuickLinks() {
 
       <li>
         <a href="#products" className="anchor">
-          Medicines
+          Products
         </a>
       </li>
 
       <li>
-        <a href="#contact" className="anchor">
-          Contact
+        <a href="#services" className="anchor">
+          Consulting
         </a>
       </li>
 
       <li>
         <a href="#pharmacies" className="anchor">
           Pharmacies
+        </a>
+      </li>
+
+      <li>
+        <a href="#contact" className="anchor">
+          Contact
         </a>
       </li>
     </ul>

@@ -13,8 +13,16 @@ interface INavItem {
 }
 
 const navItems: NavItem[] = [
-  { name: "HEALTH SERVICES", id: "healthservices" },
+  { name: "CONTACT US", id: "contact" },
+  { name: "ABOUT US", id: "about" },
+];
+
+const sideNavItems: NavItem[] = [
+  { name: "HOME", id: "#" },
   { name: "PRODUCTS", id: "products" },
+  { name: "PHARMACIES", id: "pharmacies" },
+  { name: "HEALTH CARE", id: "services" },
+  { name: "CONTACT US", id: "contact" },
   { name: "ABOUT US", id: "about" },
 ];
 
@@ -22,7 +30,10 @@ function Header() {
   const [showSideNav, toggleNav] = useState<boolean>(false);
 
   return (
-    <div id="header" className=" bg-tertiary h-[70px] flex flex-row justify-between items-center">
+    <div
+      id="header"
+      className=" bg-tertiary h-[70px] flex flex-row justify-between items-center"
+    >
       <Logo showMessage={false} imageHeight={50} />
       <div>
         <ul className="lg:flex sm:space-x-5 hidden">
@@ -85,7 +96,7 @@ function SideNavigation({ showNav, setShownav }: INavItem) {
         <Logo showMessage={false} imageHeight={40} />
       </div>
       <ul className="flex flex-col space-y-5 pt-8">
-        {navItems.map((e) => {
+        {sideNavItems.map((e) => {
           return (
             <li key={e.id}>
               <motion.a

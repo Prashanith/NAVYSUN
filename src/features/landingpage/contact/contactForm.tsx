@@ -35,13 +35,14 @@ function ContactForm() {
         contactForm.values.message
       );
       if (res) {
-        setResState("SUCCESS");
+        setResState("Submitted Successfully");
+        contactForm.resetForm()
       } else {
-        setResState("UNKNOWN ERROR OCCURED");
+        setResState("Failed to Submit");
       }
     } catch (error) {
       setLoading(false);
-      setResState("UNKNOWN ERROR OCCURED");
+      setResState("Failed to Submit");
     }
     setLoading(false);
     setTimeout(() => {
@@ -101,7 +102,7 @@ function ContactForm() {
             type="submit"
             value="SUBMIT"
             className={` w-full ${
-              resState == "SUCCESS" ? "bg-green-600" : "bg-primary"
+              resState == "Submitted Successfully" ? "bg-green-600" : "bg-primary"
             } rounded-md px-2 py-3 text-white`}
             onClick={(e) => {
               e.preventDefault();

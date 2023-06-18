@@ -1,6 +1,9 @@
 import Header from "../../../components/header/header";
 
 function Landing() {
+  function navigate(id: string) {
+    document!.getElementById(id)!.scrollIntoView();
+  }
   return (
     <div className=" bg-landing bg-cover bg-no-repeat bg-center h-screen bg-opacity-30 pagePadding">
       <Header />
@@ -19,10 +22,12 @@ function Landing() {
             service, expert advice and highest quality products
           </span>
         </p>
-        <div className="pt-[2vh] sm:pt-[5vh]">
-          <button className="btn elevatedBtn mx-2">Pharmacies</button>
-          <button className="btn outlinedBtn mx-2">Health Care</button>
-          <button className="btn textBtn mx-2">Contact Us</button>
+        <div className="pt-[2vh] sm:pt-[5vh] flex gap-5 sm:flex-row flex-wrap">
+          <button className="customBtn elevatedBtn uppercase" onClick={()=>navigate("services")}>Consulting</button>
+          <button className="customBtn outlinedBtn uppercase" onClick={()=>navigate('pharmacies')}>Pharmacies</button>
+          <button className="customBtn textBtn uppercase" onClick={()=>navigate('products')}>
+            PRODUCTS
+          </button>
         </div>
       </div>
     </div>

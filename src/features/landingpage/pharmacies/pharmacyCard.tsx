@@ -8,7 +8,7 @@ interface Pharmacy {
 function PharmacyCard({ name, location, description, imagePath }: Pharmacy) {
   const navigateToGoogleMaps = (link: string) => window.open(link, "_blank");
   return (
-    <div className="h-56 w-56 hover:scale-125 bg-tertiary hover:bg-secondary hover:text-white text-primary shadow-xl rounded-lg p-5">
+    <div className="h-auto sm:h-56 w-full sm:w-56 hover:scale-125 bg-white hover:bg-secondary hover:text-white text-primary shadow-xl rounded-lg p-5">
       <div className="flex justify-between items-center pt-2">
         <img src={imagePath} className="h-12" />
         <p
