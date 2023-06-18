@@ -22,7 +22,7 @@ function Header() {
   const [showSideNav, toggleNav] = useState<boolean>(false);
 
   return (
-    <div className=" bg-tertiary h-[70px] flex flex-row justify-between items-center">
+    <div id="header" className=" bg-tertiary h-[70px] flex flex-row justify-between items-center">
       <Logo showMessage={false} imageHeight={50} />
       <div>
         <ul className="lg:flex sm:space-x-5 hidden">

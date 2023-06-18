@@ -1,16 +1,37 @@
 import { useState } from "react";
 import "./subscribebtn.css";
 import Socials from "../socials/socials";
+import { subscribeToNewsLetter } from "../../services/subscription";
 
 function Subscribe() {
   const [email, setEmail] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
+  const [subscribeState, setSubcribeState] = useState("SUBSCRIBE");
+
+  const validateEmail = (email: String) => {
+    return String(email)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      );
+  };
+
   async function submitEmail() {
-    try {
-      setIsLoading(true);
-    } catch (error) {}
-    setIsLoading(false);
+    if (validateEmail(email)) {
+      try {
+        setIsLoading(true);
+        const res = await subscribeToNewsLetter(email);
+        setSubcribeState(res);
+      } catch (error) {
+        setSubcribeState("FAILED TO SUBSCRIBE");
+      }
+      setIsLoading(false);
+      setTimeout(() => {
+        setEmail("");
+        setSubcribeState("SUBSCRIBE");
+      }, 2500);
+    }
   }
 
   return (
@@ -34,8 +55,17 @@ function Subscribe() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         ></input>
-        <button onClick={() => submitEmail()} className="subscribeBtn">
-          {isLoading ? <div>Loader</div> : <div>SUBSCRIBE</div>}
+        <button
+          onClick={() => submitEmail()}
+          className={`subscribeBtn  ${
+            subscribeState == "SUCCESS" && "bg-green-600"
+          }`}
+        >
+          {isLoading ? (
+            <img src="./loader.svg" height={45} width={45} />
+          ) : (
+            <div>{subscribeState}</div>
+          )}
         </button>
       </div>
     </div>

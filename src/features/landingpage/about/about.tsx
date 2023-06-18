@@ -67,25 +67,25 @@ function QuickLinks() {
     <ul className="mt-8 lg:mt-0 text-lg hidden sm:flex flex-row lg:flex-col flex-wrap justify-center items-center lg:items-start gap-5 lg:gap-x-5">
       <li className=" lg:inline-block hidden">QUICK LINKS</li>
       <li>
-        <a href="#" className="anchor">
+        <a href="#header" className="anchor">
           Home
         </a>
       </li>
 
       <li>
-        <a href="#" className="anchor">
+        <a href="#products" className="anchor">
           Medicines
         </a>
       </li>
 
       <li>
-        <a href="#" className="anchor">
+        <a href="#contact" className="anchor">
           Contact
         </a>
       </li>
 
       <li>
-        <a href="#" className="anchor">
+        <a href="#pharmacies" className="anchor">
           Pharmacies
         </a>
       </li>

@@ -52,7 +52,7 @@ const products: IProduct[] = [
 
 function Products() {
   return (
-    <div className="flex flex-col pagePadding componentSpacing justify-center">
+    <div id="products" className="flex flex-col pagePadding componentSpacing justify-center">
       <div className="font-bold text-4xl lg:text-5xl">
         <p>PRODUCTS</p>
       </div>
