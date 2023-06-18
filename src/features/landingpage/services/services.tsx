@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import HealthService, { DayOfWeek } from "./healthService";
 
 function Services() {
@@ -36,7 +37,7 @@ function Services() {
       imagePath: "./doctor1.jpg",
     },
     {
-      doctor: "Dr Shivanand Reddy",
+      doctor: "Dr K.Gouthami",
       speciality: "Neurology, Multi Speciality",
       availability: [
         {
@@ -77,18 +78,34 @@ function Services() {
     >
       {/* A Heritage in Care, A Reputation in Excellence */}
       <div className="w-full xl:w-1/2">
-        <p className="font-semibold lg:text-8xl md:text-6xl text-5xl">
+        <motion.p
+          initial={{ x: "-100vw" }}
+          animate={{ x: 0 }}
+          transition={{ delay: 0, duration: 2, type: "spring" }}
+          className="font-semibold lg:text-8xl md:text-6xl text-5xl"
+        >
           We always provide
           <span className="text-secondary"> best service</span>
-        </p>
-        <p className="sm:text-2xl text-lg w-[min(90%,600px)] pt-[2vh] sm:pt-[5vh] font-medium">
+        </motion.p>
+        <motion.p
+          initial={{ x: "-100vw" }}
+          animate={{ x: 0 }}
+          transition={{ delay: 0, duration: 2, type: "spring" }}
+          className="sm:text-2xl text-lg w-[min(90%,600px)] pt-[2vh] sm:pt-[5vh] font-medium"
+        >
           We will help you feel better and ace every single day of your life.
           Visit our best in class clinics
-        </p>
+        </motion.p>
       </div>
-      <div className="flex gap-10 flex-col md:flex-row xl:flex-col">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 3, type: "spring" }}
+        className="flex gap-10 flex-col md:flex-row xl:flex-col"
+      >
         {healthServices.map((service) => (
           <HealthService
+            key={service.doctor}
             imagePath={service.imagePath}
             doctor={service.doctor}
             speciality={service.speciality}
@@ -96,7 +113,7 @@ function Services() {
             specialnote={service.specialnote}
           />
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }

@@ -42,11 +42,11 @@ function Header() {
               <motion.li
                 key={e.id}
                 whileHover={{
-                  scale: "1",
+                  scale: "1.2",
                 }}
                 initial={{ x: "100vw" }}
                 animate={{ x: 0 }}
-                transition={{ delay: 0 }}
+                transition={{ delay: 0, duration: 1, type: "spring" }}
               >
                 <motion.a
                   transition={{
@@ -87,7 +87,10 @@ function Header() {
 
 function SideNavigation({ showNav, setShownav }: INavItem) {
   return (
-    <div
+    <motion.div
+      initial={{ x: "-100vw" }}
+      animate={{ x: 0 }}
+      transition={{ delay: 0, duration: 3, type:"spring" }}
       className={`h-screen bg-primary text-tertiary shadow-rose-400 shadow-xl fixed top-0 left-0 z-10 px-8 transition-all ease-out duration-[1500] ${
         showNav ? "lg:invisible visible" : "invisible"
       }`}
@@ -118,7 +121,7 @@ function SideNavigation({ showNav, setShownav }: INavItem) {
           );
         })}
       </ul>
-    </div>
+    </motion.div>
   );
 }
 

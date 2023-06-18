@@ -1,5 +1,6 @@
 import React from "react";
 import Product from "./product";
+import { motion } from "framer-motion";
 
 interface IProduct {
   name: string;
@@ -29,22 +30,22 @@ const products: IProduct[] = [
     imagePath: "./med4.svg",
   },
   {
-    name: "OMNI GEL",
+    name: "XOMNI GEL",
     description: "",
     imagePath: "./med1.svg",
   },
   {
-    name: "VOLINI",
+    name: "XVOLINI",
     description: "",
     imagePath: "./med2.svg",
   },
   {
-    name: "VIPER 60",
+    name: "YVIPER 60",
     description: "",
     imagePath: "./med3.svg",
   },
   {
-    name: "GOAL 360",
+    name: "YGOAL 360",
     description: "",
     imagePath: "./med4.svg",
   },
@@ -52,11 +53,24 @@ const products: IProduct[] = [
 
 function Products() {
   return (
-    <div id="products" className="flex flex-col pagePadding componentSpacing justify-center bg-white">
+    <div
+      id="products"
+      className="flex flex-col pagePadding componentSpacing justify-center bg-white"
+    >
       <div className="font-bold text-4xl lg:text-5xl">
-        <p>PRODUCTS</p>
+        <motion.p
+          initial={{ x: "-100vw" }}
+          animate={{ x: 0 }}
+          transition={{ delay: 0, duration: 2, type: "spring" }}
+        >
+          PRODUCTS
+        </motion.p>
       </div>
-      <div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 3, type: "spring" }}
+      >
         <div className="carousel carousel-center w-full bg-transparent rounded-box bg-green-4">
           {products.map((product) => (
             <Product
@@ -67,7 +81,7 @@ function Products() {
             />
           ))}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

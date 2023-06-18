@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Constants from "../../config/config";
 
 interface ILogoProps {
@@ -7,7 +8,13 @@ interface ILogoProps {
 
 function Logo({ showMessage = false, imageHeight = 25 }: ILogoProps) {
   return (
-    <div className="flex justify-center items-center gap-5">
+    <motion.div
+      initial={{ x: "-100vw" }}
+      animate={{ x: 0 }}
+      transition={{ delay: 0 , duration:1, type:"spring"}}
+
+      className="flex justify-center items-center gap-5"
+    >
       <img src="./logo.png" width={imageHeight} />
       <div>
         <p className=" text-xl">{Constants.brand}</p>
@@ -15,7 +22,7 @@ function Logo({ showMessage = false, imageHeight = 25 }: ILogoProps) {
           <p className="mt-2 text-md text-gray-500">{Constants.message}</p>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 }
 

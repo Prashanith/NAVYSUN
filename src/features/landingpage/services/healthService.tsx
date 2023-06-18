@@ -1,4 +1,4 @@
-import './services.css'
+import "./services.css";
 
 interface HealthService {
   doctor: string;
@@ -42,12 +42,15 @@ function HealthService({
       <div className="py-6 px-8">
         <h1 className=" text-2xl font-bold">{doctor}</h1>
         <h2 className=" text-lg font-semibold">{speciality}</h2>
-        <div className='mt-6'>
+        <div className="mt-6">
           <h2 className=" text-sm font-medium">CONSULTATION</h2>
           {availability.map((a) => (
-            <div className=" text-sm font-normal pt-3">
+            <div key={a.dayOfWeek} className=" text-sm font-normal pt-3">
               <p>
-                <span className="w-28 inline-block">{a.dayOfWeek.toString()}</span> {a.from} - {a.to}
+                <span className="w-28 inline-block">
+                  {a.dayOfWeek.toString()}
+                </span>{" "}
+                {a.from} - {a.to}
               </p>
             </div>
           ))}

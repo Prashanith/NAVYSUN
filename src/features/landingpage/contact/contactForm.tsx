@@ -3,6 +3,7 @@ import "./contactForm.css";
 import SizedBox from "../../../components/sizedbox/sizedBox";
 import createContactRequest from "./../../../services/contact.ts";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 function ContactForm() {
   const [resState, setResState] = useState("SUBSCRIBE");
@@ -36,7 +37,7 @@ function ContactForm() {
       );
       if (res) {
         setResState("Submitted Successfully");
-        contactForm.resetForm()
+        contactForm.resetForm();
       } else {
         setResState("Failed to Submit");
       }
@@ -56,10 +57,19 @@ function ContactForm() {
       className="w-full contactBg bg-white pagePadding componentSpacing flex justify-center items-start gap-x-20"
     >
       <div className="hidden lg:block w-4/12">
-        <img src="./contact.svg" />
+        <motion.img
+          initial={{ x: "-100vw" }}
+          animate={{ x: 0 }}
+          transition={{ delay: 0, duration: 2, type: "spring" }}
+          src="./contact.svg"
+        />
         {contactForm.values.email}
       </div>
-      <div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 3, type: "spring" }}
+      >
         <form className=" flex flex-col justify-start items-start">
           <p className="my-5 text-4xl font-bold">
             Need more Information? <br />
@@ -102,7 +112,9 @@ function ContactForm() {
             type="submit"
             value="SUBMIT"
             className={` w-full ${
-              resState == "Submitted Successfully" ? "bg-green-600" : "bg-primary"
+              resState == "Submitted Successfully"
+                ? "bg-green-600"
+                : "bg-primary"
             } rounded-md px-2 py-3 text-white`}
             onClick={(e) => {
               e.preventDefault();
@@ -110,13 +122,18 @@ function ContactForm() {
             }}
           >
             {loading ? (
-              <img src="./loader.svg" height={20} width={20} className="mx-auto" />
+              <img
+                src="./loader.svg"
+                height={20}
+                width={20}
+                className="mx-auto"
+              />
             ) : (
               resState
             )}
           </button>
         </form>
-      </div>
+      </motion.div>
     </div>
   );
 }
