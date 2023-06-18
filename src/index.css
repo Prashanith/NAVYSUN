@@ -37,7 +37,7 @@
   }
 
   .customBtn{
-    @apply rounded-full px-5 py-3;
+    @apply rounded-full px-5 py-3 tracking-widest;
   }
 
   .outlinedBtn{

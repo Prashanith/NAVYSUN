@@ -35,7 +35,7 @@ function Pharmacies() {
           <br />
           <span className=" text-secondary">Pharmacies.</span>
         </p>
-        <p className="sm:text-3xl text-xl font-medium mt-10">
+        <p className="sm:text-2xl text-xl font-medium mt-10">
           <span className="">
             Get Medicines from the best of our pharmacies
           </span>
